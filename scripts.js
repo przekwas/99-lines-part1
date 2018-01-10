@@ -1,8 +1,10 @@
+//array of 5 friends .. two of which are my cats
 let friends = ["Audrey", "Yzerman", "Apollo", "Chris", "Josh"];
 
 //outer for loop to generate a song for each friend
 function songOuter(whichFriend) {
     for (let j = 0; j < whichFriend.length; j++) {
+        console.log(whichFriend[j].toUpperCase() + ":");
         songInner(whichFriend[j]);
     }
 }
@@ -20,4 +22,5 @@ function songInner(currentFriend) {
     }
 }
 
+//call that shit
 songOuter(friends);

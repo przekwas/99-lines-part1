@@ -13,8 +13,14 @@ function songOuter(whichFriend) {
 function songInner(currentFriend) {
     for (let i = 100; i > 0; i--) {
         let linesLeft = i;
+        //catch for the last line to correct grammar
         if (i === 1) {
             console.log(linesLeft + " line of code in the file, " + linesLeft + " line of code; " + currentFriend + " strikes one out, clears it all out, no more lines of code in the file\n" + "**----------------------------**\n");
+        //catch for the penultimate line to correct grammar
+        } else if (i === 2) {
+            let oneLessLine = linesLeft - 1;
+            console.log(linesLeft + " lines of code in the file, " + linesLeft + " lines of code; " + currentFriend + " strikes one out, clears it all out, " + oneLessLine + " line of code in the file");
+        //standard line
         } else {
             let oneLessLine = linesLeft - 1;
             console.log(linesLeft + " lines of code in the file, " + linesLeft + " lines of code; " + currentFriend + " strikes one out, clears it all out, " + oneLessLine + " lines of code in the file");
